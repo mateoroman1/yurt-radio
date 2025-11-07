@@ -1,0 +1,33 @@
+/*
+ * Yurt Radio - Custom Styles for TUI CSS
+ * Minimal overrides to work with TUI CSS framework
+ */
+
+/* Center utility class */
+.center {
+    text-align: center;
+}
+
+/* Status message colors */
+.status-message.error {
+    color: #ff0000;
+}
+
+.status-message.loading {
+    color: #ffff00;
+}
+
+/* Progress bar smooth animation */
+#progress-bar {
+    transition: width 0.1s linear;
+}
+
+/* Ensure buttons have pointer cursor */
+button {
+    cursor: pointer;
+}
+
+/* Make sure the window doesn't get too wide */
+body {
+    padding: 1rem;
+}

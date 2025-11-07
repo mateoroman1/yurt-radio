@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+
+# Database
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Music files (optional - uncomment if you don't want to commit music)
+music/
+*.mp3
+*.wav
+*.m4a
+*.ogg
+
+notes/
