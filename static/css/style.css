@@ -31,3 +31,80 @@ button {
 body {
     padding: 1rem;
 }
+
+/* ==================== MOBILE RESPONSIVE ==================== */
+
+/* Override TUI CSS fixed screen size on mobile */
+@media only screen and (max-width: 1024px) {
+    .tui-screen-1024-768,
+    .tui-screen-800-600,
+    .tui-screen-640-480 {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 100vh;
+        overflow-y: auto !important;
+        margin: 0 !important;
+    }
+
+    /* Remove fixed margins on mobile */
+    body {
+        padding: 0.5rem;
+    }
+
+    /* Make logo responsive */
+    img[src*="yurttech"] {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Make fieldsets responsive */
+    .tui-fieldset {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Adjust track info box */
+    .tui-window {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Stack buttons vertically on small screens */
+    .tui-button {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    /* Make sure controls look good on mobile */
+    #play-btn, #next-btn {
+        width: 48%;
+        display: inline-block !important;
+        margin: 0.25rem 1% !important;
+    }
+}
+
+/* Extra small phones */
+@media only screen and (max-width: 480px) {
+    /* Reduce padding further */
+    body {
+        padding: 0.25rem;
+    }
+
+    /* Smaller text on tiny screens */
+    #track-title {
+        font-size: 1rem !important;
+    }
+
+    #track-artist {
+        font-size: 0.9rem !important;
+    }
+
+    /* Full width buttons on very small screens */
+    #play-btn, #next-btn {
+        width: 100% !important;
+        display: block !important;
+        margin: 0.5rem 0 !important;
+    }
+}
