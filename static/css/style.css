@@ -14,7 +14,7 @@
 }
 
 .status-message.loading {
-    color: #ffff00;
+    color: #15ff00;
 }
 
 /* Progress bar smooth animation */
@@ -86,7 +86,7 @@ body {
 }
 
 /* Extra small phones */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
     /* Reduce padding further */
     body {
         padding: 0.25rem;
@@ -106,5 +106,9 @@ body {
         width: 100% !important;
         display: block !important;
         margin: 0.5rem 0 !important;
+    }
+
+    #volume-slider {
+        display: none;
     }
 }

@@ -21,11 +21,10 @@
         <main style="padding: 1rem;">
             <!-- Hidden audio element (controlled via JavaScript) -->
             <audio id="audio-player"></audio>
-
             <!-- Track Information Display -->
             <div class="center">
             <div class="tui-window white-168">
-            <fieldset class="tui-fieldset" style="max-width: 600px;">
+            <fieldset class="tui-fieldset" style="width: 600px;">
                 <legend>Now Playing</legend>
                 <div class="center" style="padding: 1rem;">
                     <div id="track-title" style="font-weight: bold; font-size: 1.2rem; margin-bottom: 0.5rem;">
@@ -39,8 +38,6 @@
                     </div>
                 </div>
             </fieldset>
-            
-
             <!-- Progress Bar -->
             <div class="progress-container">
             <div style="margin: 1rem 0;">
@@ -61,7 +58,7 @@
             </div>
 
             <!-- Volume Control -->
-            <div style="margin: 1rem 0;">
+            <div style="margin: 1rem 0;" id="volume-slider">
                 <label for="volume">Volume: <span id="volume-value">70</span>%</label>
                 <input type="range" id="volume" min="0" max="100" value="70" style="width: 100%;">
             </div>
