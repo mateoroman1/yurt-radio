@@ -35,3 +35,4 @@ music/
 *.ogg
 
 notes/
+.claude/
