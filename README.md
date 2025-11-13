@@ -1,4 +1,3 @@
-This folder will be the home of yurt-radio
-----------------------------------------
-Yurt Radio is a barebones website that plays random music compiled from a discord server that my friends and I use called "The Yurt". The Yurt has been our home for years, beginning in 2016 and fully coming to form in 2020 when the majority of us joined. Over the past 5 years it has been the host to some of our most cherished memories, jokes, conversations, and much more. The Yurt is much more than just a groupchat to us. It's a home, a guiding light in hard times, a hub of creativity, of intellectual thought, of comedy gold. Through the years, we've shared our passion for music with each other, sending snippets and songs back and forth. We now want to share this collection of efforts and experiments with the world in the form of a website that allows anyone to come and hear what we each have created over the years.
+yurt-radio
+
 
