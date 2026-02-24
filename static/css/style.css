@@ -27,9 +27,9 @@ button {
     cursor: pointer;
 }
 
-/* Make sure the window doesn't get too wide */
-body {
-    padding: 1rem;
+/* Add spacing around the TUI window */
+.tui-screen-1024-768 {
+    margin-top: 1rem;
 }
 
 /* ==================== MOBILE RESPONSIVE ==================== */
@@ -48,8 +48,8 @@ body {
     }
 
     /* Remove fixed margins on mobile */
-    body {
-        padding: 0.5rem;
+    .tui-screen-1024-768 {
+        margin-top: 0.5rem;
     }
 
     /* Make logo responsive */
@@ -87,9 +87,9 @@ body {
 
 /* Extra small phones */
 @media only screen and (max-width: 600px) {
-    /* Reduce padding further */
-    body {
-        padding: 0.25rem;
+    /* Reduce spacing further */
+    .tui-screen-1024-768 {
+        margin-top: 0.25rem;
     }
 
     /* Smaller text on tiny screens */

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagery — Yurt Tech</title>
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="icon" type="image/x-icon" href="/resources/favicon.ico">
+</head>
+<body class="has-nav">
+    <nav class="site-nav">
+        <span class="nav-brand">YURT TECH</span>
+        <a href="/">HOME</a>
+        <a href="/worlds">WORLDS</a>
+        <a href="/tools">TOOLS</a>
+        <a href="/imagery">IMAGERY</a>
+        <a href="/radio">RADIO</a>
+        <a href="/notes">NOTES</a>
+    </nav>
+
+    <div class="page-wrapper">
+        <h1 class="page-title">Imagery</h1>
+
+        <!-- Filter controls -->
+        <div class="gallery-controls">
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="artwork">ARTWORK</button>
+                <button class="filter-btn" data-filter="photography">PHOTOGRAPHY</button>
+                <button class="filter-btn" data-filter="game-screenshots">GAME SCREENSHOTS</button>
+            </div>
+            <button id="size-toggle" class="size-toggle-btn">
+                SIZE: <span id="size-label">LARGE</span>
+            </button>
+        </div>
+
+        <!-- Gallery grid -->
+        <div id="gallery" class="gallery-grid size-large">
+
+            <!-- Add real images here. data-category must match a filter-btn data-filter value. -->
+
+            <figure class="gallery-item" data-category="artwork">
+                <div style="width:100%;aspect-ratio:3/2;background:#0a0a0a;display:flex;align-items:center;justify-content:center;color:#333;font-size:0.7rem;letter-spacing:0.1em;">
+                    <img src = "resources/graphics/magazineOG.png">
+                </div>
+                <figcaption class="gallery-caption">
+                    <span class="caption-title">"Magazine" - Mateo Roman</span>
+                    <span class="caption-sub">Artwork</span>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="photography">
+                <div style="width:100%;aspect-ratio:3/2;background:#0a0a0a;display:flex;align-items:center;justify-content:center;color:#333;font-size:0.7rem;letter-spacing:0.1em;">
+                    <img src = "resources/film/Image 10.jpg">
+                </div>
+                <figcaption class="gallery-caption">
+                    <span class="caption-title">Mt. Coolidge - Black Hills, SD - Portra 400</span>
+                    <span class="caption-sub">Photography</span>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="game-screenshots">
+                <div style="width:100%;aspect-ratio:3/2;background:#0a0a0a;display:flex;align-items:center;justify-content:center;color:#333;font-size:0.7rem;letter-spacing:0.1em;">
+                    <img src = "resources/games/main_world_map.png">
+                </div>
+                <figcaption class="gallery-caption">
+                    <span class="caption-title">Brutal Online Map</span>
+                    <span class="caption-sub">Game Screenshot</span>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="artwork">
+                <div style="width:100%;aspect-ratio:3/2;background:#0a0a0a;display:flex;align-items:center;justify-content:center;color:#333;font-size:0.7rem;letter-spacing:0.1em;">
+                    <img src = "resources/graphics/buildering.png">
+                </div>
+                <figcaption class="gallery-caption">
+                    <span class="caption-title">"Garry's Game" - Mateo Roman</span>
+                    <span class="caption-sub">Artwork</span>
+                </figcaption>
+            </figure>
+
+        </div>
+    </div>
+
+    <script src="/js/imagery.js"></script>
+    <script src="/js/nav.js"></script>
+</body>
+</html>
