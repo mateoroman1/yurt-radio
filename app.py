@@ -149,7 +149,7 @@ def notes_index():
     rows = ''.join(
         f'<li class="notes-item">'
         f'<a href="/notes/{e["slug"]}" class="notes-link">{e["title"]}</a>'
-        f'<span class="notes-author">{e['author']}</span>'
+        f'<span class="notes-author">{e["author"]}</span>'
         f'<span class="notes-date">{e["date"]}</span>'
         f'</li>'
         for e in entries
