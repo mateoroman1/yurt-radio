@@ -34,52 +34,22 @@
             </button>
         </div>
 
-        <!-- Gallery grid -->
-        <div id="gallery" class="gallery-grid size-large">
+        <!-- Gallery grid — populated by imagery.js -->
+        <div id="gallery" class="gallery-grid size-large"></div>
+    </div>
 
-            <!-- Add real images here. data-category must match a filter-btn data-filter value. -->
-
-            <figure class="gallery-item" data-category="artwork">
-                <div style="width:100%;aspect-ratio:3/2;background:#0a0a0a;display:flex;align-items:center;justify-content:center;color:#333;font-size:0.7rem;letter-spacing:0.1em;">
-                    <img src = "resources/graphics/magazineOG.png">
-                </div>
-                <figcaption class="gallery-caption">
-                    <span class="caption-title">"Magazine" - Mateo Roman</span>
-                    <span class="caption-sub">Artwork</span>
-                </figcaption>
-            </figure>
-
-            <figure class="gallery-item" data-category="photography">
-                <div style="width:100%;aspect-ratio:3/2;background:#0a0a0a;display:flex;align-items:center;justify-content:center;color:#333;font-size:0.7rem;letter-spacing:0.1em;">
-                    <img src = "resources/film/Image 10.jpg">
-                </div>
-                <figcaption class="gallery-caption">
-                    <span class="caption-title">Mt. Coolidge - Black Hills, SD - Portra 400</span>
-                    <span class="caption-sub">Photography</span>
-                </figcaption>
-            </figure>
-
-            <figure class="gallery-item" data-category="game-screenshots">
-                <div style="width:100%;aspect-ratio:3/2;background:#0a0a0a;display:flex;align-items:center;justify-content:center;color:#333;font-size:0.7rem;letter-spacing:0.1em;">
-                    <img src = "resources/games/main_world_map.png">
-                </div>
-                <figcaption class="gallery-caption">
-                    <span class="caption-title">Brutal Online Map</span>
-                    <span class="caption-sub">Game Screenshot</span>
-                </figcaption>
-            </figure>
-
-            <figure class="gallery-item" data-category="artwork">
-                <div style="width:100%;aspect-ratio:3/2;background:#0a0a0a;display:flex;align-items:center;justify-content:center;color:#333;font-size:0.7rem;letter-spacing:0.1em;">
-                    <img src = "resources/graphics/buildering.png">
-                </div>
-                <figcaption class="gallery-caption">
-                    <span class="caption-title">"Garry's Game" - Mateo Roman</span>
-                    <span class="caption-sub">Artwork</span>
-                </figcaption>
-            </figure>
-
-        </div>
+    <!-- Lightbox overlay -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lb-close" id="lb-close" aria-label="Close">&times;</button>
+        <button class="lb-prev" id="lb-prev" aria-label="Previous">&#8592;</button>
+        <button class="lb-next" id="lb-next" aria-label="Next">&#8594;</button>
+        <figure class="lb-figure">
+            <img id="lb-img" src="" alt="">
+            <figcaption class="lb-caption">
+                <span id="lb-title" class="lb-title"></span>
+                <span id="lb-sub" class="lb-sub"></span>
+            </figcaption>
+        </figure>
     </div>
 
     <script src="/js/imagery.js"></script>

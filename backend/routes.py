@@ -9,7 +9,21 @@ from backend.services import TrackService
 from backend.models import get_track_by_id, get_all_tracks, get_stats
 from backend.utils import get_mimetype
 import config
+import json
 import os
+
+# ---- Imagery constants ----
+_ROUTES_DIR    = os.path.dirname(os.path.abspath(__file__))
+_PROJECT_ROOT  = os.path.dirname(_ROUTES_DIR)
+IMAGERY_BASE   = os.path.join(_PROJECT_ROOT, 'static', 'resources')
+
+IMAGERY_DIRS = {
+    'graphics': {'category': 'artwork',         'label': 'Artwork'},
+    'film':     {'category': 'photography',      'label': 'Photography'},
+    'games':    {'category': 'game-screenshots', 'label': 'Game Screenshots'},
+}
+
+IMAGE_EXTS = {'.jpg', '.jpeg', '.png', '.gif', '.webp', '.avif'}
 
 # Create a Blueprint for API routes
 api_bp = Blueprint('api', __name__)
@@ -134,6 +148,51 @@ def health_check():
         JSON: {"status": "ok"}
     """
     return jsonify({"status": "ok"})
+
+@api_bp.route('/imagery', methods=['GET'])
+def list_imagery():
+    """
+    Return a list of gallery images scanned from static/resources/.
+
+    Each category subdirectory may contain a _metadata.json file that maps
+    filenames to display titles.  Filenames without an entry fall back to a
+    title derived from the filename.
+
+    Returns:
+        JSON: List of {src, title, category, label}
+    """
+    images = []
+    for dirname, info in IMAGERY_DIRS.items():
+        dirpath = os.path.join(IMAGERY_BASE, dirname)
+        if not os.path.isdir(dirpath):
+            continue
+
+        metadata = {}
+        meta_path = os.path.join(dirpath, '_metadata.json')
+        if os.path.exists(meta_path):
+            with open(meta_path, 'r', encoding='utf-8') as f:
+                metadata = json.load(f)
+
+        for fname in sorted(os.listdir(dirpath)):
+            if fname.startswith('_'):
+                continue
+            ext = os.path.splitext(fname)[1].lower()
+            if ext not in IMAGE_EXTS:
+                continue
+
+            img_meta = metadata.get(fname, {})
+            base  = os.path.splitext(fname)[0]
+            title = img_meta.get('title', base.replace('-', ' ').replace('_', ' ').title())
+
+            images.append({
+                'src':      f'/resources/{dirname}/{fname}',
+                'title':    title,
+                'category': info['category'],
+                'label':    info['label'],
+            })
+
+    return jsonify(images)
+
 
 @api_bp.route('/', methods=['GET', 'POST'])
 def root():

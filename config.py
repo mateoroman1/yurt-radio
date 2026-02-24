@@ -19,6 +19,9 @@ SUPPORTED_FORMATS = ['.mp3', '.flac', '.ogg', '.m4a', '.wav']
 # Higher number = less repetition, but requires more memory
 MAX_RECENT_TRACKS = 10
 
+# Images directory
+IMAGES_DIRECTORY = os.getenv('IMAGES_DIR', './images')
+
 # Flask configuration
 DEBUG = True
 HOST = '127.0.0.1'
